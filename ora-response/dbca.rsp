@@ -1,0 +1,12 @@
+responseFileVersion=/oracle/assistants/rspfmt_dbca_response_schema_v12.2.0
+gdbName=orcl
+sid=orcl
+databaseConfigType=SI
+templateName=General_Purpose.dbc
+sysPassword=password
+systemPassword=password
+emExpressPort=5500
+storageType=FS
+characterSet=AL32UTF8
+nationalCharacterSet=AL16UTF16
+databaseType=MULTIPURPOSE

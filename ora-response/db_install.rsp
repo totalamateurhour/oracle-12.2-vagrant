@@ -1,0 +1,17 @@
+oracle.install.responseFileVersion=/oracle/install/rspfmt_dbinstall_response_schema_v12.2.0
+oracle.install.option=INSTALL_DB_SWONLY
+ORACLE_HOSTNAME=db12c
+UNIX_GROUP_NAME=oinstall
+INVENTORY_LOCATION=/opt/oraInventory
+SELECTED_LANGUAGES=en
+ORACLE_BASE=/opt/oracle
+ORACLE_HOME=/opt/oracle/product/12.2.0.1/dbhome_1
+oracle.install.db.InstallEdition=EE
+oracle.install.db.DBA_GROUP=dba
+oracle.install.db.BACKUPDBA_GROUP=dba
+oracle.install.db.DGDBA_GROUP=dba
+oracle.install.db.KMDBA_GROUP=dba
+oracle.install.db.OSRACDBA_GROUP=dba
+SECURITY_UPDATES_VIA_MYORACLESUPPORT=false
+DECLINE_SECURITY_UPDATES=true
+oracle.installer.autoupdates.option=SKIP_UPDATES
