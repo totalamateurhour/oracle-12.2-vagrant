@@ -35,9 +35,11 @@ echo "export ORACLE_BASE=/opt/oracle" >> /home/oracle/.bashrc \
 echo 'INSTALLER: Environment variables set'
 
 # install Oracle
+unzip /vagrant/linux*122*.zip -d /vagrant
 su -l oracle -c "yes | /vagrant/database/runInstaller -silent -showProgress -ignorePrereq -waitforcompletion -responseFile /vagrant/ora-response/db_install.rsp"
 /opt/oraInventory/orainstRoot.sh
 /opt/oracle/product/12.2.0.1/dbhome_1/root.sh
+rm -rf /vagrant/database
 
 echo 'INSTALLER: Oracle installed'
 
