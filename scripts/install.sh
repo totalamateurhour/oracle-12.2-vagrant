@@ -21,7 +21,7 @@ yum install -y oracle-database-server-12cR2-preinstall
 echo 'INSTALLER: Oracle preinstall complete'
 
 # create directories
-mkdir /opt/oracle /opt/oraInventory /opt/datafile
+mkdir /opt/oracle /opt/oraInventory
 chown oracle:oinstall -R /opt
 
 echo 'INSTALLER: Oracle directories created'
