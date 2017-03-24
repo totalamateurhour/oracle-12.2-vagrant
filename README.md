@@ -15,7 +15,9 @@ from [http://www.oracle.com/technetwork/database/enterprise-edition/downloads/in
 ## Connecting to Oracle
 * Hostname: `localhost`
 * Port: `1521`
-* SID: `orcl`
+* SID: `ORCLCDB`
+* PDB: `ORCLPDB1`
+* OEM port: `5500`
 * All passwords are `password`.
 
 ## Acknowledgements

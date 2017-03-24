@@ -1,10 +1,10 @@
 responseFileVersion=/oracle/assistants/rspfmt_dbca_response_schema_v12.2.0
-gdbName=orcl
-sid=orcl
+gdbName=ORCLCDB
+sid=ORCLCDB
 databaseConfigType=SI
 createAsContainerDatabase=true
 numberOfPDBs=1
-pdbName=orclpdb1
+pdbName=ORCLPDB1
 pdbAdminPassword=password
 templateName=General_Purpose.dbc
 sysPassword=password
