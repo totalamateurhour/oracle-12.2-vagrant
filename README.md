@@ -4,7 +4,7 @@ A vagrant box that provisions Oracle Database 12c release 2 automatically, using
 ## Getting started
 1. Clone this repository `git clone https://github.com/totalamateurhour/oracle-12.2-vagrant`
 2. Download the Oracle Database 12c release 2 binaries linuxx64_12201_database.zip
-from [http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html) and unzip to `database/`
+from [http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
 3. Install [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 4. Install [Vagrant](https://vagrantup.com/)
 5. Run `vagrant up`
@@ -15,7 +15,9 @@ from [http://www.oracle.com/technetwork/database/enterprise-edition/downloads/in
 ## Connecting to Oracle
 * Hostname: `localhost`
 * Port: `1521`
-* SID: `orcl`
+* SID: `ORCLCDB`
+* PDB: `ORCLPDB1`
+* OEM port: `5500`
 * All passwords are `password`.
 
 ## Acknowledgements
