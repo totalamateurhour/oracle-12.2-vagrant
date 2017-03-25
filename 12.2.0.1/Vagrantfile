@@ -20,6 +20,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 5500, host: 5500
 
   # Provision everything on the first run
-  config.vm.provision "shell", path: "scripts/install.sh"
+  config.vm.provision "shell", path: "scripts/install.sh", env:
+    {
+       "ORACLE_BASE" => "/opt/oracle",
+       "ORACLE_HOME" => "/opt/oracle/product/12.2.0.1/dbhome_1"
+    }
 
 end
