@@ -28,7 +28,7 @@ echo 'INSTALLER: Oracle directories created'
 # set environment variables
 echo "export ORACLE_BASE=$ORACLE_BASE" >> /home/oracle/.bashrc \
  && echo "export ORACLE_HOME=$ORACLE_HOME" >> /home/oracle/.bashrc \
- && echo "export ORACLE_SID=ORCLCDB" >> /home/oracle/.bashrc \
+ && echo "export ORACLE_SID=$ORACLE_SID" >> /home/oracle/.bashrc \
  && echo "export PATH=\$PATH:\$ORACLE_HOME/bin" >> /home/oracle/.bashrc
 
 echo 'INSTALLER: Environment variables set'
