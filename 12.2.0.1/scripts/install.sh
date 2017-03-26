@@ -54,6 +54,7 @@ echo 'INSTALLER: Listener created'
 cp /vagrant/ora-response/dbca.rsp.tmpl /vagrant/ora-response/dbca.rsp
 sed -i -e "s|###ORACLE_SID###|$ORACLE_SID|g" /vagrant/ora-response/dbca.rsp && \
 sed -i -e "s|###ORACLE_PDB###|$ORACLE_PDB|g" /vagrant/ora-response/dbca.rsp && \
+sed -i -e "s|###ORACLE_CHARACTERSET###|$ORACLE_CHARACTERSET|g" /vagrant/ora-response/dbca.rsp
 su -l oracle -c "dbca -silent -createDatabase -responseFile /vagrant/ora-response/dbca.rsp"
 rm /vagrant/ora-response/dbca.rsp
 
