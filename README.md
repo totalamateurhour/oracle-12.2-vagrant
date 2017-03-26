@@ -33,6 +33,9 @@ Based on @steveswinsburg's work here: https://github.com/steveswinsburg/oracle12
 * The Oracle installation path is `/opt/oracle/`
 * On the guest OS, the directory `/vagrant` is a shared folder and maps to wherever you have this file checked out.
 
+### Customization
+You can customize your Oracle environment by amending the environment variables in the `Vagrantfile` file.
+
 ## Known issues
 
 
