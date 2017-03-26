@@ -35,10 +35,14 @@ echo 'INSTALLER: Environment variables set'
 
 # install Oracle
 unzip /vagrant/linux*122*.zip -d /vagrant
+cp /vagrant/ora-response/db_install.rsp.tmpl /vagrant/ora-response/db_install.rsp
+sed -i -e "s|###ORACLE_BASE###|$ORACLE_BASE|g" /vagrant/ora-response/db_install.rsp && \
+sed -i -e "s|###ORACLE_HOME###|$ORACLE_HOME|g" /vagrant/ora-response/db_install.rsp && \
 su -l oracle -c "yes | /vagrant/database/runInstaller -silent -showProgress -ignorePrereq -waitforcompletion -responseFile /vagrant/ora-response/db_install.rsp"
 $ORACLE_BASE/oraInventory/orainstRoot.sh
 $ORACLE_HOME/root.sh
 rm -rf /vagrant/database
+rm /vagrant/ora-response/db_install.rsp
 
 echo 'INSTALLER: Oracle installed'
 
@@ -55,6 +59,7 @@ echo 'INSTALLER: Oratab configured'
 
 # configure systemd to start oracle instance on startup
 sudo cp /vagrant/scripts/oracle-rdbms.service /etc/systemd/system/
+sudo sed -i -e "s|###ORACLE_HOME###|$ORACLE_HOME|g" /etc/systemd/system/oracle-rdbms.service
 sudo systemctl daemon-reload
 sudo systemctl enable oracle-rdbms
 sudo systemctl start oracle-rdbms
