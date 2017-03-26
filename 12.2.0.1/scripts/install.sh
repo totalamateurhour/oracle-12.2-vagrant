@@ -26,10 +26,10 @@ chown oracle:oinstall -R $ORACLE_BASE
 echo 'INSTALLER: Oracle directories created'
 
 # set environment variables
-echo "export ORACLE_BASE=$ORACLE_BASE" >> /home/oracle/.bashrc \
- && echo "export ORACLE_HOME=$ORACLE_HOME" >> /home/oracle/.bashrc \
- && echo "export ORACLE_SID=$ORACLE_SID" >> /home/oracle/.bashrc \
- && echo "export PATH=\$PATH:\$ORACLE_HOME/bin" >> /home/oracle/.bashrc
+echo "export ORACLE_BASE=$ORACLE_BASE" >> /home/oracle/.bashrc && \
+echo "export ORACLE_HOME=$ORACLE_HOME" >> /home/oracle/.bashrc && \
+echo "export ORACLE_SID=$ORACLE_SID" >> /home/oracle/.bashrc   && \
+echo "export PATH=\$PATH:\$ORACLE_HOME/bin" >> /home/oracle/.bashrc
 
 echo 'INSTALLER: Environment variables set'
 
@@ -51,7 +51,12 @@ su -l oracle -c "netca -silent -responseFile /vagrant/ora-response/netca.rsp"
 echo 'INSTALLER: Listener created'
 
 # create database
+cp /vagrant/ora-response/dbca.rsp.tmpl /vagrant/ora-response/dbca.rsp
+sed -i -e "s|###ORACLE_SID###|$ORACLE_SID|g" /vagrant/ora-response/dbca.rsp && \
+sed -i -e "s|###ORACLE_PDB###|$ORACLE_PDB|g" /vagrant/ora-response/dbca.rsp && \
 su -l oracle -c "dbca -silent -createDatabase -responseFile /vagrant/ora-response/dbca.rsp"
+rm /vagrant/ora-response/dbca.rsp
+
 echo 'INSTALLER: Database created'
 
 sed '$s/N/Y/' /etc/oratab | sudo tee /etc/oratab > /dev/null
