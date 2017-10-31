@@ -11,7 +11,7 @@ A vagrant box that provisions Oracle Database 12c Release 2 automatically, using
 3. First time only (see #5): Download the Oracle Database 12c Release 2 binaries linuxx64_12201_database.zip
 from [http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
 4. Run `vagrant up`
-    5. The first time you run this it will provision everything and may take a while. Ensure you have a good internet connection!
+5. The first time you run this it will provision everything and may take a while. Ensure you have a good internet connection!
 6. Connect to the database.
 7. You can shut down the box via the usual `vagrant halt` and the start it up again via `vagrant up`.
 
