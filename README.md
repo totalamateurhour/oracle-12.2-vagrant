@@ -1,5 +1,5 @@
 # oracle-12.2-vagrant
-A vagrant box that provisions Oracle Database 12c Release 2 automatically, using Vagrant, an Oracle Linux 7.3 box and a shell script.
+A vagrant box that provisions Oracle Database 12c Release 2 automatically, using Vagrant, the latest Oracle Linux 7 box and a shell script.
 
 ## Prerequisites
 1. Install [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
